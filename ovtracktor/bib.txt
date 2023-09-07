@@ -1,0 +1,6 @@
+@inproceedings{harley2022particle,
+  author    = {Adam W. Harley and Zhaoyuan Fang and Katerina Fragkiadaki}, 
+  title     = {Particle Video Revisited: {T}racking Through Occlusions Using Point Trajectories},
+  booktitle = {ECCV},
+  year      = {2022}
+}
