@@ -10,7 +10,7 @@
 
       gtag('config', 'UA-61302010-1');
     </script>
-    <title>Particle Video Revisited: Tracking Through Occlusions Using Point Trajectories</title>
+    <title>Zero-Shot Open-Vocabulary Tracking with Large-Scale Pre-Trained Models</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -54,73 +54,27 @@
 	<div class="w3-display-container w3-row w3-white w3-margin-bottom">
 	  <div class="w3-center">
 	    <h1>Zero-Shot Open-Vocabulary Tracking with Large-Scale Pre-Trained Models</h1>
-	    <h5>Wen-Hsuan Chu &emsp;&emsp; Adam W. Harley &emsp;&emsp; Pavel Tokmakov &emsp;&emsp; Achal Dave &emsp;&emsp; Katerina Fragkiadaki</h5>
-	    <!-- <h5><em>ECCV 2022 (Oral)</em></h5> --!>
+	    <h5>Wen-Hsuan Chu &emsp;&emsp; Adam W. Harley &emsp;&emsp; Pavel Tokmakov &emsp;&emsp; Achal Dave &emsp;&emsp; Leonidas J. Guibas &emsp;&emsp; Katerina Fragkiadaki</h5>
+	    <!-- <h5><em>ECCV 2022 (Oral)</em></h5> -->
 	  </div>
 	  <div class="w3-center">
-	    <!-- <h3>[<a href="https://github.com/aharley/pips">Code</a>] &emsp; [<a href="https://openaccess.thecvf.com/content/CVPR2021/papers/Harley_Track_Check_Repeat_An_EM_Approach_to_Unsupervised_Tracking_CVPR_2021_paper.pdf">Paper</a>]</h3> -->
-	    <!-- <h3>[<a href="https://arxiv.org/abs/2204.04153">Paper</a>] &emsp; [<a href="https://github.com/aharley/pips">Code</a>] &emsp; [<a href="https://blog.ml.cmu.edu/2022/09/09/tracking-any-pixel-in-a-video/">Blog</a>]</h3> --!>
+	    <h3>[Code (coming soon)] &emsp; [Paper (coming soon)]</h3>
 	  </div>
 	  <hr>
 
-          <!-- <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;margin-top:10px;"> -->
-	  <!--   <tr style="padding:0px"> -->
-	  <!--     <td style="padding-right:0%;width:100%;vertical-align:middle"> -->
-	  <!-- 	<video controls style="width:100%;max-width:100%" autoplay="true" loop="true" playsinline="true" muted="true"> -->
-	  <!-- 	  <source src="videos/horse_dense_loop.mp4" type="video/mp4">Sorry, your browser doesn't support embedded videos. -->
-	  <!-- 	</video> -->
-	  <!--     </td> -->
-	  <!--   </tr> -->
-	    <!-- </table> -->
-
-          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;margin-top:10px;">
+	  <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;margin-top:10px;">
 	    <tr style="padding:0px">
 	      <td style="padding-right:1%;width:32%;vertical-align:middle">
-		<!-- <div align="center">DINO</div> -->
-		<img style="width:100%;max-width:100%" alt="" src="images/horse-20.gif">
-
-		<!-- <video controls style="width:100%;max-width:100%" autoplay="true" loop="true" playsinline="true" muted="true">
-		  <source src="videos/camel_mask_loop.mp4" type="video/mp4">Sorry, your browser doesn't support embedded videos.
-		</video>
-		
+			<img style="width:100%;max-width:100%" alt="" src="images/horse-20.gif">
 	      </td>
 	      <td style="padding-right:1%;width:32%;vertical-align:middle">
-		<video controls style="width:100%;max-width:100%" autoplay="true" loop="true" playsinline="true" muted="true">
-		  <source src="videos/fish_mask_loop.mp4" type="video/mp4">Sorry, your browser doesn't support embedded videos.
-		</video>
-		
+			<img style="width:100%;max-width:100%" alt="" src="images/horse-20.gif">
 	      </td>
 	      <td style="padding-right:1%;width:32%;vertical-align:middle">
-		<video controls style="width:100%;max-width:100%" autoplay="true" loop="true" playsinline="true" muted="true">
-		  <source src="videos/dancer_mask_loop.mp4" type="video/mp4">Sorry, your browser doesn't support embedded videos.
-		</video>
-		
+			<img style="width:100%;max-width:100%" alt="" src="images/horse-20.gif">
 	      </td>
 	    </tr>
 	  </table>
-
-          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;margin-top:10px;">
-	    <tr style="padding:0px">
-	      <td style="padding-right:1%;width:32%;vertical-align:middle">
-		<video controls style="width:100%;max-width:100%" autoplay="true" loop="true" playsinline="true" muted="true">
-		  <source src="videos/horse_dense_loop.mp4" type="video/mp4">Sorry, your browser doesn't support embedded videos.
-		</video>
-		
-	      </td>
-	      <td style="padding-right:1%;width:32%;vertical-align:middle">
-		<video controls style="width:100%;max-width:100%" autoplay="true" loop="true" playsinline="true" muted="true">
-		  <source src="videos/judo_dense_loop.mp4" type="video/mp4">Sorry, your browser doesn't support embedded videos.
-		</video>
-	      </td>
-	      <td style="padding-right:1%;width:32%;vertical-align:middle">
-		<video controls style="width:100%;max-width:100%" autoplay="true" loop="true" playsinline="true" muted="true">
-		  <source src="videos/duck_dense_loop.mp4" type="video/mp4">Sorry, your browser doesn't support embedded videos.
-		</video>
-	      </td>
-	    </tr>
-	  </table> -->
-	  
-
 	  
 	  <!-- <div class="w3-display-container w3-row w3-white w3-margin-bottom w3-center"> -->
 	  <!--   <img src="images/fig1.png" style="width:100%"> -->
@@ -132,70 +86,52 @@
 	  <p>Tracking-by-detection has long been a dominant paradigm for object tracking of specific object categories, such as people and vehicles. Recently, large-scale pre-trained models have shown promising advances in detecting and segmenting various types of objects and object parts in 2D images in the wild. This begs the question: can we re-purpose these large-scale pretrained static image detectors and segmenters to advance open-vocabulary video tracking? In this paper, we re-purpose an open-vocabulary detector, segmenter, and dense optical flow estimator, into a model that tracks and segments objects of any category in 2D videos. Given a monocular video input, our method predicts object and part tracks, with associated language descriptions. Our approach does not introduce any significant innovations: we propagate object boxes from frame to frame using an optical flow based motion model, we refine these propagated boxes with the box regression module of an open-vocabulary visual detector, and we prompt an open-world segmenter with the refined box to segment the box interior in a temporally consistent way. We decide the termination of an object track using forward-backward optical flow consistency, and re-identify using deep feature matching. We show that our model achieves strong performance on multiple established video object segmentation and tracking benchmarks, including DAVIS, YoutubeVOS, UVO, and BURST. In particular, our model outperforms pervious state-of-the-art in UVO and BURST, benchmarks for open-world object tracking and segmentation, despite never being explicitly trained for tracking. We hope that our approach can serve as a simple and extensible framework for future research. Our code will be made publicly available. </p>
 	  <hr>
 
-	  <!--
 	  <div class="w3-center">
-	    <h2>Video</h2>
+	    <h2>Overview</h2>
 	  </div>
-	  <div class="w3-display-container w3-row w3-white w3-margin-bottom w3-center">
+	  <p>Please see the video for a short summary of the approach.</p>
+	  <!-- <div class="w3-display-container w3-row w3-white w3-margin-bottom w3-center">
 	    <iframe width="800" height="600" src="https://www.youtube.com/embed/Jg2f5fkgxZo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-	  </div>
+	  </div> -->
 	  <hr>
-	  -->
-
 	  <div class="w3-center">
-	    <h2>Demo</h2>
+	    <h2>Additional Results</h2>
 	  </div>
-	  <p><strong>Goal</strong>: Given a video, track any object of interest in the video frames.</p>
-	  <!-- <p>Unlike feature-matching or flow-based methods, particle trajectories can track objects during and through occlusions.</p> -->
-          <!-- <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+	  <p>For quantitative results, please check out the paper. Here we show some gifs on examples where the users can prompt the tracker to track specific object categories.</p>
+	  <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;margin-top:10px;">
 	    <tr style="padding:0px">
 	      <td style="padding-right:1%;width:32%;vertical-align:middle">
-		<div align="center">DINO</div>
+			No prompts <br>
+			<img style="width:100%;max-width:100%" alt="" src="images/horse-20.gif">
+	      </td>
+		  <td style="padding-right:1%;width:32%;vertical-align:middle">
+			"Saddle" <br>
+			<img style="width:100%;max-width:100%" alt="" src="images/horse-20.gif">
+	      </td>
+		</tr>
+		<tr>
+	      <td style="padding-right:1%;width:32%;vertical-align:middle">
+			No prompts <br>
+			<img style="width:100%;max-width:100%" alt="" src="images/horse-20.gif">
 	      </td>
 	      <td style="padding-right:1%;width:32%;vertical-align:middle">
-		<div align="center">RAFT</div>
-	      </td>
-	      <td style="padding-right:1%;width:32%;vertical-align:middle">
-		<div align="center">PIPs (ours)</div>
+			"Coffee Maker" <br>
+			<img style="width:100%;max-width:100%" alt="" src="images/horse-20.gif">
 	      </td>
 	    </tr>
 	  </table>
-	  <table>
-	    <tr style="padding:0px">
-	      <td style="width:100%;vertical-align:middle">
-		<video controls style="width:100%;max-width:100%" autoplay="true" loop="true" playsinline="true" muted="true">
-		  <source src="videos/horse_all.mp4" type="video/mp4">Sorry, your browser doesn't support embedded videos.
-		</video>
-	      </td>
-	    </tr>
-	  </table>
-	  <table>
-	    <tr style="padding:0px">
-	      <td style="width:100%;vertical-align:middle">
-		<video controls style="width:100%;max-width:100%" autoplay="true" loop="true" playsinline="true" muted="true">
-		  <source src="videos/camel_all.mp4" type="video/mp4">Sorry, your browser doesn't support embedded videos.
-		</video>
-	      </td>
-	    </tr>
-	  </table>
-	  <table>
-	    <tr style="padding:0px">
-	      <td style="width:100%;vertical-align:middle">
-		<video controls style="width:100%;max-width:100%" autoplay="true" loop="true" playsinline="true" muted="true">
-		  <source src="videos/dog_all.mp4" type="video/mp4">Sorry, your browser doesn't support embedded videos.
-		</video>
-	      </td>
-	    </tr>
-	  </table>
-	  <table>
-	    <tr style="padding:0px">
-	      <td style="width:100%;vertical-align:middle">
-		<video controls style="width:100%;max-width:100%" autoplay="true" loop="true" playsinline="true" muted="true">
-		  <source src="videos/horse2_all.mp4" type="video/mp4">Sorry, your browser doesn't support embedded videos.
-		</video>
-	      </td>
-	    </tr>
-	  </table> -->
+	  <p>By swapping out the detector for a referential detector, OVTracktor can be easily extended for referential tracking.</p>
+	  <tr style="padding:0px">
+		<td style="padding-right:1%;width:32%;vertical-align:middle">
+		  "Some utterance here" <br>
+		  <img style="width:100%;max-width:100%" alt="" src="images/horse-20.gif">
+		</td>
+		<td style="padding-right:1%;width:32%;vertical-align:middle">
+		  "Some utterance here" <br>
+		  <img style="width:100%;max-width:100%" alt="" src="images/horse-20.gif">
+		</td>
+	  </tr>
+	  <hr>
 
 	  <div class="w3-row w3-margin" style="padding-bottom:2em">
 	    <div class="w3-center"><h2>Paper</h2></div>
@@ -208,7 +144,7 @@
 		Wen-Hsuan Chu, Adam W. Harley, Pavel Tokmakov, Achal Dave, and Katerina Fragkiadaki.
 		<i>Zero-Shot Open-Vocabulary Tracking with Large-Scale Pre-Trained Models</i> 
 	      </div>
-	      <h3>[pdf]&emsp;<a href="bib.txt">[bibtex]</a></h3>
+	      <h3>[pdf]&emsp;[bibtex]</h3>
 	    </div>
 	    <div class="w3-col s0 m1 l2" style="height:10px"></div>
 	  </div>
