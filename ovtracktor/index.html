@@ -69,10 +69,10 @@
 			<img style="width:100%;max-width:100%" alt="" src="images/horse-20.gif">
 	      </td>
 	      <td style="padding-right:1%;width:32%;vertical-align:middle">
-			<img style="width:100%;max-width:100%" alt="" src="images/horse-20.gif">
+			<img style="width:100%;max-width:100%" alt="" src="images/davis_dogs.gif">
 	      </td>
 	      <td style="padding-right:1%;width:32%;vertical-align:middle">
-			<img style="width:100%;max-width:100%" alt="" src="images/horse-20.gif">
+			<img style="width:100%;max-width:100%" alt="" src="images/robotap.gif">
 	      </td>
 	    </tr>
 	  </table>
@@ -84,7 +84,7 @@
 	  <div class="w3-center">
 	    <h2>Abstract</h2>
 	  </div>
-	  <p>Tracking-by-detection has long been a dominant paradigm for object tracking of specific object categories, such as people and vehicles. Recently, large-scale pre-trained models have shown promising advances in detecting and segmenting various types of objects and object parts in 2D images in the wild. This begs the question: can we re-purpose these large-scale pretrained static image detectors and segmenters to advance open-vocabulary video tracking? In this paper, we re-purpose an open-vocabulary detector, segmenter, and dense optical flow estimator, into a model that tracks and segments objects of any category in 2D videos. Given a monocular video input, our method predicts object and part tracks, with associated language descriptions. Our approach does not introduce any significant innovations: we propagate object boxes from frame to frame using an optical flow based motion model, we refine these propagated boxes with the box regression module of an open-vocabulary visual detector, and we prompt an open-world segmenter with the refined box to segment the box interior in a temporally consistent way. We decide the termination of an object track using forward-backward optical flow consistency, and re-identify using deep feature matching. We show that our model achieves strong performance on multiple established video object segmentation and tracking benchmarks, including DAVIS, YoutubeVOS, UVO, and BURST. In particular, our model outperforms pervious state-of-the-art in UVO and BURST, benchmarks for open-world object tracking and segmentation, despite never being explicitly trained for tracking. We hope that our approach can serve as a simple and extensible framework for future research. Our code will be made publicly available. </p>
+	  <p>Tracking-by-detection has long been a dominant paradigm for object tracking of specific object categories, such as people and vehicles. Recently, large-scale pre-trained models have shown promising advances in detecting and segmenting various types of objects and object parts in 2D images in the wild. This begs the question: can we re-purpose these large-scale pretrained static image detectors and segmenters to advance open-vocabulary video tracking? In this paper, we re-purpose an open-vocabulary detector, segmenter, and dense optical flow estimator, into a model that tracks and segments objects of any category in 2D videos. Given a monocular video input, our method predicts object and part tracks, with associated language descriptions. Our approach does not introduce any significant innovations: we propagate object boxes from frame to frame using an optical flow based motion model, we refine these propagated boxes with the box regression module of an open-vocabulary visual detector, and we prompt an open-world segmenter with the refined box to segment the box interior in a temporally consistent way. We decide the termination of an object track using forward-backward optical flow consistency, and re-identify using deep feature matching. We show that our model achieves strong performance on multiple established video object segmentation and tracking benchmarks, despite never being explicitly trained for tracking. We hope that our approach can serve as a simple and extensible framework for future research.</p>
 	  <hr>
 
 	  <div class="w3-center">
@@ -103,12 +103,12 @@
 	    <tr style="padding:0px">
 	      <td style="padding-right:1%;width:32%;vertical-align:middle">
 			<div class="w3-center"><font size="+1"><strong>No prompts</strong></font></div> <br>
-			<img style="width:100%;max-width:100%" alt="" src="images/horse-20.gif">
+			<img style="width:100%;max-width:100%" alt="" src="images/davis_default.gif">
 	      </td>
 		  <br>
 		  <td style="padding-right:1%;width:32%;vertical-align:middle">
 			<div class="w3-center"><font size="+1"><strong>"Saddle"</strong></font></div> <br>
-			<img style="width:100%;max-width:100%" alt="" src="images/horse-20.gif">
+			<img style="width:100%;max-width:100%" alt="" src="images/davis_prompt.gif">
 	      </td>
 		</tr>
 	  </table>
@@ -116,11 +116,11 @@
 		<tr>
 	      <td style="padding-right:1%;width:32%;vertical-align:middle">
 			<div class="w3-center"><font size="+1"><strong>No prompts</strong></font></div> <br>
-			<img style="width:100%;max-width:100%" alt="" src="images/horse-20.gif">
+			<img style="width:100%;max-width:100%" alt="" src="images/uvo_default.gif">
 	      </td>
 	      <td style="padding-right:1%;width:32%;vertical-align:middle">
 			<div class="w3-center"><font size="+1"><strong>"Coffee Maker"</strong></font></div> <br>
-			<img style="width:100%;max-width:100%" alt="" src="images/horse-20.gif">
+			<img style="width:100%;max-width:100%" alt="" src="images/uvo_prompt.gif">
 	      </td>
 	    </tr>
 	  </table>
@@ -128,12 +128,16 @@
 	  <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;margin-top:10px;">
 		<tr style="padding:0px">
 			<td style="padding-right:1%;width:45%;vertical-align:middle">
-				<div class="w3-center"><font size="+1"><strong>"Some utterance here"</strong></font></div> <br>
-			    <img style="width:100%;max-width:100%" alt="" src="images/horse-20.gif">
+				<div class="w3-center"><font size="+1"><strong>"Large orange Parachute"</strong></font></div> <br>
+			    <img style="width:100%;max-width:100%" alt="" src="images/parachute_grounded.gif">
 			</td>
+		</tr>
+	  </table>
+	  <p>Since the detector is run at all frames, care must be taken when querying for "position-based" entities. In this example, the "rightmost" person changes as the original person goes out of view, leading to 2 final tracks.</p>
+	  <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;margin-top:10px;"></table>
 			<td style="padding-right:1%;width:45%;vertical-align:middle">
-				<div class="w3-center"><font size="+1"><strong>"Some utterance here"</strong></font></div> <br>
-			    <img style="width:100%;max-width:100%" alt="" src="images/horse-20.gif">
+				<div class="w3-center"><font size="+1"><strong>"Rightmost person"</strong></font></div> <br>
+			    <img style="width:100%;max-width:100%" alt="" src="images/rightmost_grounded.gif">
 			</td>
 		</tr>
 	  </table>
@@ -143,7 +147,7 @@
 	    <div class="w3-center"><h2>Paper</h2></div>
 	    <div class="w3-col s0 m1 l2" style="height:10px"></div>
 	    <div class="w3-col s6 m3 l2">
-			<img class="layered-paper-big" src="images/page.png" style="width:100%;min-height:200px; margin-right:3em">
+			<img class="layered-paper-big" src="images/p1_paper.png" style="width:100%;min-height:200px; margin-right:3em">
 	    </div>
 	    <div class="w3-col s6 m7 l6" style="padding-left:5em">
 	      <div class="cite">
