@@ -10,7 +10,7 @@
 
       gtag('config', 'UA-61302010-1');
     </script>
-    <title>Zero-Shot Open-Vocabulary Tracking with Large-Scale Pre-Trained Models</title>
+    <title>Zero-Shot Open-Vocabulary Tracking with Large Pre-Trained Models</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -86,17 +86,12 @@
 	  </div>
 	  <p>Tracking-by-detection has long been a dominant paradigm for object tracking of specific object categories, such as people and vehicles. Recently, large-scale pre-trained models have shown promising advances in detecting and segmenting various types of objects and object parts in 2D images in the wild. This begs the question: can we re-purpose these large-scale pretrained static image detectors and segmenters to advance open-vocabulary video tracking? In this paper, we re-purpose an open-vocabulary detector, segmenter, and dense optical flow estimator, into a model that tracks and segments objects of any category in 2D videos. Given a monocular video input, our method predicts object and part tracks, with associated language descriptions. Our approach does not introduce any significant innovations: we propagate object boxes from frame to frame using an optical flow based motion model, we refine these propagated boxes with the box regression module of an open-vocabulary visual detector, and we prompt an open-world segmenter with the refined box to segment the box interior in a temporally consistent way. We decide the termination of an object track using forward-backward optical flow consistency, and re-identify using deep feature matching. We show that our model achieves strong performance on multiple established video object segmentation and tracking benchmarks, despite never being explicitly trained for tracking. We hope that our approach can serve as a simple and extensible framework for future research.</p>
 	  <hr>
-
-	  <div class="w3-center">
-	    <h2>Overview</h2>
-	  </div>
-	  <p>Please see the video for a short summary of the approach.</p>
 	  <div class="w3-display-container w3-row w3-white w3-margin-bottom w3-center">
-	    <iframe width="800" height="600" src="https://www.youtube.com/embed/gNnE6elXcXA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	    <iframe width="800" height="600" src="https://www.youtube.com/embed/gNnE6elXcXA?autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 	  </div>
 	  <hr>
 	  <div class="w3-center">
-	    <h2>Additional Results</h2>
+	    <h2>Results</h2>
 	  </div>
 	  <p>For quantitative results, please check out the paper. Here we show some gifs on examples where the users can prompt the tracker to track specific object categories.</p>
 	  <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;margin-top:10px;">
