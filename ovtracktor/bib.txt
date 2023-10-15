@@ -1,6 +1,6 @@
-@inproceedings{harley2022particle,
-  author    = {Adam W. Harley and Zhaoyuan Fang and Katerina Fragkiadaki}, 
-  title     = {Particle Video Revisited: {T}racking Through Occlusions Using Point Trajectories},
-  booktitle = {ECCV},
-  year      = {2022}
+@inproceedings{chu2023ovtracktor,
+  author    = {Wen-Hsuan Chu and Adam W. Harley and Pavel Tokmakov and Achal Dave and Leonidas J. Guibas and Katerina Fragkiadaki}, 
+  title     = {Zero-Shot Open-Vocabulary Tracking with Large Pre-Trained Models},
+  booktitle = {arXiV},
+  year      = {2023}
 }
