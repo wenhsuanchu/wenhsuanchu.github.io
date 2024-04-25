@@ -188,7 +188,8 @@
     </div>
     <h2 class="subtitle has-text-centered">
       <span class="dnerf">DreamScene4D</span> produces scene-level dynamic Gaussian representations
-      from monocular videos with multiple objects undergoing large and complex motions. 
+      from monocular <br />
+      videos with multiple objects undergoing large and complex motions. 
     </h2>
   </div>
 </section>
@@ -202,32 +203,21 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Existing VLMs can track in-the-wild 2D video objects while current generative models provide
-            powerful visual priors for synthesizing novel views for the highly under-constrained 2D-to-3D
-            object lifting. Building upon this exciting progress, we present DreamScene4D, the first approach
-            for generating three-dimensional dynamic scenes of multiple objects from monocular in-the-wild videos.
+            DreamScene4D can generate novel views for dynamic multi-object scenes across occlusions and novel viewpoints.
+            We first decompose the video scene by segmenting, tracking, and amodally completing the visible
+            part of each object in the scene. Each object track is mapped to a set of 3D Gaussians that deform
+            and move in space and time.
           </p>
           <p>
-            DreamScene4D disentangles monocular videos into the 3D camera and object motion, and can generate novel
-            views for dynamic multi-object scenes across occlusions and novel viewpoints. We first decompose the
-            video scene by taking open-vocabulary mask trackers to segment and track the visible part of each object
-            in the scene. We complete the amodal appearance of each object and the background behind cross-object
-            occlusions in the given view by adapting image diffusion models for spatiotemporal inpainting.
+            To handle complex object motions, we propose to factorize the object motions into three components:
+            camera motion, object-centric deformations and object-centric to world frame transformationss. Finally,
+            we recompose the background and objects and optimize for relative object scales using monocular
+            depth prediction guidance. 
           </p>
           <p>
-            Each object track is mapped to a set of 3D Gaussians that deform and move in space and time. The camera
-            motion can be inferred by re-rendering the background to match the video frames. To handle complex object
-            motions, we propose to factorize the object motions into two components: we first model the object-centric
-            deformation of the objects by leveraging rendering losses and multi-view generative priors in an object-centric
-            frame, then optimize object-centric to world frame transformations by comparing the rendered outputs from
-            the input camera pose against the perceived pixel and optical flow. Finally, we recompose the background
-            and objects and optimize for relative object scales using monocular depth prediction guidance. 
-          </p>
-          <p></p>
-            We show extensive results on challenging DAVIS, Kubric, and self-captured videos, detail some limitations,
-            and provide future directions. Besides 4D scene generation, our results show that DreamScene4D
-            enables accurate 2D point motion tracking by projecting the inferred 3D trajectories to 2D,
-            while never explicitly trained to do so. 
+            We show extensive results on challenging DAVIS, Kubric, and self-captured videos. Besides 4D scene
+            generation, our results show that DreamScene4D enables accurate 2D point motion tracking by projecting
+            the inferred 3D trajectories to 2D, while never explicitly trained to do so. 
           </p>
         </div>
       </div>
