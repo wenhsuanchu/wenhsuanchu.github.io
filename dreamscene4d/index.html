@@ -57,25 +57,6 @@
           <i class="fas fa-home"></i>
       </span>
       </a>
-
-      <div class="navbar-item has-dropdown is-hoverable">
-        <a class="navbar-link">
-          More Research
-        </a>
-        <div class="navbar-dropdown">
-          <a class="navbar-item" href="https://hypernerf.github.io">
-            HyperNeRF
-          </a>
-          <a class="navbar-item" href="https://nerfies.github.io">
-            Nerfies
-          </a>
-          <a class="navbar-item" href="https://latentfusion.github.io">
-            LatentFusion
-          </a>
-          <a class="navbar-item" href="https://photoshape.github.io">
-            PhotoShape
-          </a>
-        </div>
       </div>
     </div>
 
@@ -176,25 +157,8 @@
 </section>
 
 <section class="hero teaser">
-  <div class="container is-max-desktop">
-    <div class="hero-body">
-      <video id="teaser" autoplay muted loop playsinline height="100%">
-        <source src="./static/videos/teaser.mp4"
-                type="video/mp4">
-      </video>
-      <h2 class="subtitle has-text-centered">
-        <span class="dnerf">Nerfies</span> turns selfie videos from your phone into
-        free-viewpoint
-        portraits.
-      </h2>
-    </div>
-  </div>
-</section>
-
-
-<section class="hero is-light is-small">
   <div class="hero-body">
-    <div class="container">
+    <div class="container is-max-desktop">
       <div id="results-carousel" class="carousel results-carousel">
         <div class="item item-rollerblade">
           <video poster="" id="rollerblade-demo" autoplay controls muted loop playsinline height="100%">
@@ -208,20 +172,24 @@
                     type="video/mp4">
           </video>
         </div>
-        <div class="item item-teaser">
-          <video poster="" id="teaser" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/teaser.mp4"
+        <div class="item item-breakdance">
+          <video poster="" id="breakdance-demo" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/breakdance-demo.mp4"
                     type="video/mp4">
           </video>
         </div>
-        <div class="item item-teaser2">
-          <video poster="" id="teaser2" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/teaser.mp4"
+        <div class="item item-stroller2">
+          <video poster="" id="stroller-demo2" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/stroller-demo.mp4"
                     type="video/mp4">
           </video>
         </div>
       </div>
     </div>
+    <h2 class="subtitle has-text-centered">
+      <span class="dnerf">DreamScene4D</span> produces scene-level dynamic Gaussian representations
+      from monocular videos with multiple objects undergoing large and complex motions. 
+    </h2>
   </div>
 </section>
 
@@ -234,31 +202,32 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            We present the first method capable of photorealistically reconstructing a non-rigidly
-            deforming scene using photos/videos captured casually from mobile phones.
+            Existing VLMs can track in-the-wild 2D video objects while current generative models provide
+            powerful visual priors for synthesizing novel views for the highly under-constrained 2D-to-3D
+            object lifting. Building upon this exciting progress, we present DreamScene4D, the first approach
+            for generating three-dimensional dynamic scenes of multiple objects from monocular in-the-wild videos.
           </p>
           <p>
-            Our approach augments neural radiance fields
-            (NeRF) by optimizing an
-            additional continuous volumetric deformation field that warps each observed point into a
-            canonical 5D NeRF.
-            We observe that these NeRF-like deformation fields are prone to local minima, and
-            propose a coarse-to-fine optimization method for coordinate-based models that allows for
-            more robust optimization.
-            By adapting principles from geometry processing and physical simulation to NeRF-like
-            models, we propose an elastic regularization of the deformation field that further
-            improves robustness.
+            DreamScene4D disentangles monocular videos into the 3D camera and object motion, and can generate novel
+            views for dynamic multi-object scenes across occlusions and novel viewpoints. We first decompose the
+            video scene by taking open-vocabulary mask trackers to segment and track the visible part of each object
+            in the scene. We complete the amodal appearance of each object and the background behind cross-object
+            occlusions in the given view by adapting image diffusion models for spatiotemporal inpainting.
           </p>
           <p>
-            We show that <span class="dnerf">Nerfies</span> can turn casually captured selfie
-            photos/videos into deformable NeRF
-            models that allow for photorealistic renderings of the subject from arbitrary
-            viewpoints, which we dub <i>"nerfies"</i>. We evaluate our method by collecting data
-            using a
-            rig with two mobile phones that take time-synchronized photos, yielding train/validation
-            images of the same pose at different viewpoints. We show that our method faithfully
-            reconstructs non-rigidly deforming scenes and reproduces unseen views with high
-            fidelity.
+            Each object track is mapped to a set of 3D Gaussians that deform and move in space and time. The camera
+            motion can be inferred by re-rendering the background to match the video frames. To handle complex object
+            motions, we propose to factorize the object motions into two components: we first model the object-centric
+            deformation of the objects by leveraging rendering losses and multi-view generative priors in an object-centric
+            frame, then optimize object-centric to world frame transformations by comparing the rendered outputs from
+            the input camera pose against the perceived pixel and optical flow. Finally, we recompose the background
+            and objects and optimize for relative object scales using monocular depth prediction guidance. 
+          </p>
+          <p></p>
+            We show extensive results on challenging DAVIS, Kubric, and self-captured videos, detail some limitations,
+            and provide future directions. Besides 4D scene generation, our results show that DreamScene4D
+            enables accurate 2D point motion tracking by projecting the inferred 3D trajectories to 2D,
+            while never explicitly trained to do so. 
           </p>
         </div>
       </div>
