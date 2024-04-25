@@ -6,7 +6,7 @@
         content="Deformable Neural Radiance Fields creates free-viewpoint portraits (nerfies) from casually captured videos.">
   <meta name="keywords" content="Nerfies, D-NeRF, NeRF">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Nerfies: Deformable Neural Radiance Fields</title>
+  <title>DreamScene4D: Dynamic Multi-Object Scene Generation from Monocular Videos</title>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
@@ -69,32 +69,20 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">Nerfies: Deformable Neural Radiance Fields</h1>
+          <h1 class="title is-1 publication-title">DreamScene4D: Dynamic Multi-Object Scene Generation from Monocular Videos</h1>
           <div class="is-size-5 publication-authors">
             <span class="author-block">
-              <a href="https://keunhong.com">Keunhong Park</a><sup>1</sup>,</span>
+              <a href="https://keunhong.com">Wen-Hsuan Chu</a><sup>*</sup>,</span>
             <span class="author-block">
-              <a href="https://utkarshsinha.com">Utkarsh Sinha</a><sup>2</sup>,</span>
+              <a href="https://utkarshsinha.com">Lei Ke</a><sup>*</sup>,</span>
             <span class="author-block">
-              <a href="https://jonbarron.info">Jonathan T. Barron</a><sup>2</sup>,
+              <a href="https://jonbarron.info">Katerina Fragkiadaki</a>
             </span>
-            <span class="author-block">
-              <a href="http://sofienbouaziz.com">Sofien Bouaziz</a><sup>2</sup>,
-            </span>
-            <span class="author-block">
-              <a href="https://www.danbgoldman.com">Dan B Goldman</a><sup>2</sup>,
-            </span>
-            <span class="author-block">
-              <a href="https://homes.cs.washington.edu/~seitz/">Steven M. Seitz</a><sup>1,2</sup>,
-            </span>
-            <span class="author-block">
-              <a href="http://www.ricardomartinbrualla.com">Ricardo Martin-Brualla</a><sup>2</sup>
-            </span>
+
           </div>
 
           <div class="is-size-5 publication-authors">
-            <span class="author-block"><sup>1</sup>University of Washington,</span>
-            <span class="author-block"><sup>2</sup>Google Research</span>
+            <span class="author-block"><sup>*</sup>Equal Contribution</span>
           </div>
 
           <div class="column has-text-centered">
@@ -138,15 +126,6 @@
                   <span>Code</span>
                   </a>
               </span>
-              <!-- Dataset Link. -->
-              <span class="link-block">
-                <a href="https://github.com/google/nerfies/releases/tag/0.1"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="far fa-images"></i>
-                  </span>
-                  <span>Data</span>
-                  </a>
             </div>
 
           </div>
@@ -159,32 +138,28 @@
 <section class="hero teaser">
   <div class="hero-body">
     <div class="container is-max-desktop">
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-rollerblade">
-          <video poster="" id="rollerblade-demo" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/rollerblade-demo.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-stroller">
-          <video poster="" id="stroller-demo" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/stroller-demo.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-breakdance">
-          <video poster="" id="breakdance-demo" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/breakdance-demo.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-stroller2">
-          <video poster="" id="stroller-demo2" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/stroller-demo.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-      </div>
+      <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;margin-top:10px;">
+        <tr style="padding:0px">
+          <td style="padding-right:1%;width:32%;vertical-align:middle">
+            <video poster="" id="stroller-demo" autoplay controls muted loop playsinline height="100%" style="border-radius:18px; overflow:hidden">
+              <source src="./static/videos/stroller-demo.mp4"
+                      type="video/mp4">
+            </video>
+          </td>
+          <td style="padding-right:1%;width:32%;vertical-align:middle">
+            <video poster="" id="rollerblade-demo" autoplay controls muted loop playsinline height="100%" style="border-radius:18px; overflow:hidden">
+              <source src="./static/videos/rollerblade-demo.mp4"
+                      type="video/mp4">
+            </video>
+          </td>
+          <td style="padding-right:1%;width:32%;vertical-align:middle">
+            <video poster="" id="breakdance-demo" autoplay controls muted loop playsinline height="100%" style="border-radius:18px; overflow:hidden">
+              <source src="./static/videos/breakdance-demo.mp4"
+                      type="video/mp4">
+            </video>
+          </td>
+        </tr>
+      </table>
     </div>
     <h2 class="subtitle has-text-centered">
       <span class="dnerf">DreamScene4D</span> produces scene-level dynamic Gaussian representations
@@ -193,7 +168,6 @@
     </h2>
   </div>
 </section>
-
 
 <section class="section">
   <div class="container is-max-desktop">
@@ -210,7 +184,7 @@
           </p>
           <p>
             To handle complex object motions, we propose to factorize the object motions into three components:
-            camera motion, object-centric deformations and object-centric to world frame transformationss. Finally,
+            camera motion, object-centric deformations and object-centric to world frame transformations. Finally,
             we recompose the background and objects and optimize for relative object scales using monocular
             depth prediction guidance. 
           </p>
@@ -223,18 +197,14 @@
       </div>
     </div>
     <!--/ Abstract. -->
-
-    <!-- Paper video. -->
+    <br />
+    <!-- Overview. -->
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-3">Video</h2>
-        <div class="publication-video">
-          <iframe src="https://www.youtube.com/embed/MrKrnHhk8IA?rel=0&amp;showinfo=0"
-                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-        </div>
+        <img src="static/images/method.png" style='height: 100%; width: 100%; object-fit: contain'/>
       </div>
     </div>
-    <!--/ Paper video. -->
+    <!--/ Overview. -->
   </div>
 </section>
 
