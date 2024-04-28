@@ -148,7 +148,7 @@
       </table>
     </div>
     <h2 class="subtitle has-text-centered">
-      <span class="dnerf">DreamScene4D</span> produces scene-level dynamic Gaussian representations
+      <span class="dnerf">DreamScene4D</span> can produce dynamic scene-level Gaussian representations
       from monocular <br />
       videos with multiple objects undergoing large and complex motions. 
     </h2>
@@ -163,21 +163,26 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            DreamScene4D can generate novel views for dynamic multi-object scenes across occlusions and novel viewpoints.
-            We first decompose the video scene by segmenting, tracking, and amodally completing the visible
-            part of each object in the scene. Each object track is mapped to a set of 3D Gaussians that deform
-            and move in space and time.
+            We present DreamScene4D, the first method capable of lifting multi-object monocular videos to 4D 
+            using dynamic Gaussian Splatting. It is able to handle large and complex motions
+            observed in challenging real life videos.
+          </p>
+          <p></p>
+            First, we utilize large pre-trained models to decompose the video scene by segmenting, tracking,
+            and amodally completing the visible part of each object in the scene. Each object track is
+            mapped to a set of 3D Gaussians that deform and move in space and time.
           </p>
           <p>
             To handle complex object motions, we propose to factorize the object motions into three components:
-            camera motion, object-centric deformations and object-centric to world frame transformations. Finally,
-            we recompose the background and objects and optimize for relative object scales using monocular
+            camera motion, object-centric deformations, and object-centric to world-frame transformations. Finally,
+            we re-compose the objects and optimize for relative object scales using monocular
             depth prediction guidance. 
           </p>
           <p>
-            We show extensive results on challenging DAVIS, Kubric, and self-captured videos. Besides 4D scene
-            generation, our results show that DreamScene4D enables accurate 2D point motion tracking by projecting
-            the inferred 3D trajectories to 2D, while never explicitly trained to do so. 
+            We present results on challenging DAVIS and self-captured videos. DreamScene4D can generate
+            arbitrary novel views for dynamic multi-object scenes across occlusions, as well as enable 2D point
+            motion tracking by projecting the inferred 3D Gaussian trajectories to 2D, while never explicitly
+            trained to do so.
           </p>
         </div>
       </div>
@@ -204,7 +209,7 @@
             <i>DreamScene4D</i> can synthesize views from
             arbitrary camera poses at any given timestep. We present some examples
             where we render the scene using the reference camera (outlined in
-            <font color="#008ada">blue</font>) and using an orbital camera by varying
+            <font color="#008ada">blue</font>) and an orbital camera that changes
             the azimuth and elevation angle (outlined in <font color="#da8300">orange</font>).
             The original input video is presented in the leftmost column for reference.
           </p>
@@ -522,14 +527,14 @@
   <div class="hero-body">
     <div class="columns is-centered">
       <div class="column is-three-fifths">
-        <h2 class="title is-3">Motion Trajectories</h2>
+        <h2 class="title is-3">Gaussian Motion Trajectories</h2>
         <div class="content has-text-justified">
           <p>
-            Using the optimized deformation network from <i>DreamScene4D</i> we can obtain 2D and 3D
-            trajectories for individual Gaussians and points. We show that the deformed Gaussian motion
-            provides reasonable motion trajectoreis in both the original view (outlined in
-            <font color="#008ada">blue</font>) and in novel unseen views (outlined in
-            <font color="#da8300">orange</font>).
+            We can obtain 3D Gaussian trajectories from <i>DreamScene4D</i>, which can then be projected
+            to 2D given any camera pose. We show that the Gaussian deformations provide reasonable
+            2D point motion trajectories in both the original view
+            (outlined in <font color="#008ada">blue</font>) and in novel unseen views
+            (outlined in <font color="#da8300">orange</font>).
           </p>
         </div>
         <div class="container">
