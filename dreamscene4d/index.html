@@ -167,9 +167,10 @@
           <p>
             We present DreamScene4D, the first method capable of lifting multi-object monocular videos to 4D 
             using dynamic Gaussian Splatting. It is able to handle large and complex motions
-            observed in challenging real life videos.
+            observed in challenging real life videos, thanks to object-scene decomposition and a motion
+            factorization scheme.
           </p>
-          <p></p>
+          <!-- <p>
             First, we utilize large pre-trained models to decompose the video scene by segmenting, tracking,
             and amodally completing the visible part of each object in the scene. Each object track is
             mapped to a set of 3D Gaussians that deform and move in space and time.
@@ -179,22 +180,27 @@
             camera motion, object-centric deformations, and object-centric to world-frame transformations. Finally,
             we re-compose the objects and optimize for relative object scales using monocular
             depth prediction guidance. 
-          </p>
+          </p> -->
           <p>
-            We present results on challenging DAVIS and self-captured videos. DreamScene4D can generate
-            arbitrary novel views for dynamic multi-object scenes across occlusions, as well as enable 2D point
-            motion tracking by projecting the inferred 3D Gaussian trajectories to 2D, while never explicitly
-            trained to do so.
+            DreamScene4D can generate arbitrary novel views for dynamic multi-object scenes across occlusions,
+            as well as enable 2D point motion tracking by projecting the inferred 3D Gaussian trajectories to
+            2D, while never explicitly trained to do so.
           </p>
-        </div>
-      </div>
-    </div>
-    <!--/ Abstract. -->
-    <br />
-    <!-- Overview. -->
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <img src="static/images/method.png" style='height: 100%; width: 100%; object-fit: contain'/>
+          <!--/ Abstract. -->
+          <br />
+          <!-- Overview. -->
+            <img src="static/images/method.png" style='height: 100%; width: 100%; object-fit: contain'/>
+            <p>
+              <small>
+                <b>(a)</b> We decompose and amodally complete objects and the background in the video,
+                then use <a href="https://dreamgaussian.github.io/">DreamGaussian</a> obtain static
+                3D Gaussian representations.
+                <b>(b)</b> Next, we factorize the object motion into multiple components and optimize them
+                independently.
+                <b>(c)</b> Finally, we re-compose the objects using monocular depth prediction guidance. 
+              </small>
+            </p>
+          </div>
       </div>
     </div>
   </div>
@@ -204,7 +210,7 @@
 <section class="hero is-light is-small">
   <div class="hero-body">
     <div class="columns is-centered">
-      <div class="column is-three-fifths">
+      <div class="column is-four-fifths">
         <h2 class="title is-3">Arbitrary View Synthesis</h2>
         <div class="content has-text-justified">
           <p>
@@ -528,7 +534,7 @@
 <section class="hero">
   <div class="hero-body">
     <div class="columns is-centered">
-      <div class="column is-three-fifths">
+      <div class="column is-four-fifths">
         <h2 class="title is-3">Gaussian Motion Trajectories</h2>
         <div class="content has-text-justified">
           <p>
