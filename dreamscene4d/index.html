@@ -538,8 +538,8 @@
         <h2 class="title is-3">Gaussian Motion Trajectories</h2>
         <div class="content has-text-justified">
           <p>
-            We can obtain 3D Gaussian trajectories from <i>DreamScene4D</i>, which can then be projected
-            to 2D given any camera pose. We show that the Gaussian deformations provide reasonable
+            We visualize the 3D Gaussian trajectories from <i>DreamScene4D</i> corresponding to the pixels rendered from
+            camera views by projecting them to 2D. We show that the Gaussian deformations provide reasonable
             2D point motion trajectories in both the original view
             (outlined in <font color="#008ada">blue</font>) and in novel unseen views
             (outlined in <font color="#da8300">orange</font>).
@@ -642,30 +642,6 @@
         </div>
         <div class="container">
           <div id="comparisons-carousel" class="carousel results-carousel" style="margin: 0 auto;">
-            <div class="item item-Dogs-Jump">
-              <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;margin-top:20px;margin-bottom:20px;">
-                <tr style="padding:0px">
-                  <td style="padding-left:1%;padding-right:1%;width:33%;vertical-align:middle">
-                    <video poster="" id="Dogs-Jump-Orig" autoplay controls muted loop playsinline height="100%" style="border-radius:18px; overflow:hidden">
-                      <source src="./static/videos/dogs-jump.mp4"
-                              type="video/mp4">
-                    </video>
-                  </td>
-                  <td style="padding-right:1%;width:33%;vertical-align:middle">
-                    <video poster="" id="Dogs-Jump-DG4D" autoplay controls muted loop playsinline height="100%" style="border-radius:18px; border: 3px solid #000000; overflow:hidden">
-                      <source src="./static/videos/Dogs-Jump DG4D.mp4"
-                              type="video/mp4">
-                    </video>
-                  </td>
-                  <td style="padding-right:1%;width:33%;vertical-align:middle">
-                    <video poster="" id="Dogs-Jump-Ours" autoplay controls muted loop playsinline height="100%" style="border-radius:18px; border: 3px solid #000000; overflow:hidden">
-                      <source src="./static/videos/Dogs-Jump Composed Hor Orbit.mp4"
-                              type="video/mp4">
-                    </video>
-                  </td>
-                </tr>
-              </table>
-            </div>
             <div class="item item-Ducky">
               <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;margin-top:20px;margin-bottom:20px;">
                 <tr style="padding:0px">
@@ -684,6 +660,30 @@
                   <td style="padding-right:1%;width:33%;vertical-align:middle">
                     <video poster="" id="Ducky-Ours" autoplay controls muted loop playsinline height="100%" style="border-radius:18px; border: 3px solid #000000; overflow:hidden">
                       <source src="./static/videos/Ducky Composed Hor Orbit.mp4"
+                              type="video/mp4">
+                    </video>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="item item-Dogs-Jump">
+              <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;margin-top:20px;margin-bottom:20px;">
+                <tr style="padding:0px">
+                  <td style="padding-left:1%;padding-right:1%;width:33%;vertical-align:middle">
+                    <video poster="" id="Dogs-Jump-Orig" autoplay controls muted loop playsinline height="100%" style="border-radius:18px; overflow:hidden">
+                      <source src="./static/videos/dogs-jump.mp4"
+                              type="video/mp4">
+                    </video>
+                  </td>
+                  <td style="padding-right:1%;width:33%;vertical-align:middle">
+                    <video poster="" id="Dogs-Jump-DG4D" autoplay controls muted loop playsinline height="100%" style="border-radius:18px; border: 3px solid #000000; overflow:hidden">
+                      <source src="./static/videos/Dogs-Jump DG4D.mp4"
+                              type="video/mp4">
+                    </video>
+                  </td>
+                  <td style="padding-right:1%;width:33%;vertical-align:middle">
+                    <video poster="" id="Dogs-Jump-Ours" autoplay controls muted loop playsinline height="100%" style="border-radius:18px; border: 3px solid #000000; overflow:hidden">
+                      <source src="./static/videos/Dogs-Jump Composed Hor Orbit.mp4"
                               type="video/mp4">
                     </video>
                   </td>
